@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {TestComponent} from './test/test.component';
 import {PagesComponent} from './pages.component';
 import {RouterModule, Routes} from '@angular/router';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 const routes: Routes = [{
   path: '',
@@ -10,7 +9,7 @@ const routes: Routes = [{
   children: [
     {
       path: 'dashboard',
-      component: TestComponent,
+      component: DashboardComponent,
     },
     {
       path: '',

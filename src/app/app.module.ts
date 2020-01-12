@@ -28,7 +28,6 @@ registerLocaleData(zh);
     NgZorroAntdModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgZorroAntdModule,
     FormsModule
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],

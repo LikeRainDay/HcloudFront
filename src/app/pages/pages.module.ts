@@ -1,22 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {PagesRoutingModule} from './pages-routing.module';
 import {PagesComponent} from './pages.component';
-import {TestComponent} from './test/test.component';
 import {RouterModule} from '@angular/router';
 import {ThemeModule} from '../@theme/theme.module';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     PagesComponent,
-    TestComponent
+    DashboardComponent,
   ],
   imports: [
     PagesRoutingModule,
-    RouterModule,
     ThemeModule,
     NgZorroAntdModule,
   ]

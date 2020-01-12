@@ -1,10 +1,15 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 
-
 const routes: Routes = [
-  {path: '', redirectTo: 'pages', pathMatch: 'full'},
+  {path: '', redirectTo: 'auth', pathMatch: 'full'},
+  {
+    path: 'auth',
+    loadChildren: () => {
+      return import('./auth/auth.module')
+        .then(m => m.AuthModule);
+    }
+  },
   {
     path: 'pages',
     loadChildren: () => {
@@ -12,7 +17,7 @@ const routes: Routes = [
         .then(m => m.PagesModule);
     }
   },
-  {path: '**', redirectTo: 'pages'}
+  {path: '**', redirectTo: 'auth'}
 ];
 
 const config: ExtraOptions = {
