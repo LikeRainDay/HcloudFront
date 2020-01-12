@@ -4,6 +4,8 @@ import {PagesRoutingModule} from './pages-routing.module';
 import {PagesComponent} from './pages.component';
 import {TestComponent} from './test/test.component';
 import {RouterModule} from '@angular/router';
+import {ThemeModule} from '../@theme/theme.module';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
 
 
 
@@ -15,6 +17,8 @@ import {RouterModule} from '@angular/router';
   imports: [
     PagesRoutingModule,
     RouterModule,
+    ThemeModule,
+    NgZorroAntdModule,
   ]
 })
 export class PagesModule { }

@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import {NgZorroAntdModule, NZ_I18N, NzGridModule, NzLayoutModule, zh_CN} from 'ng-zorro-antd';
 import {FormsModule} from '@angular/forms';
 import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
@@ -25,6 +25,7 @@ registerLocaleData(zh);
     AppRoutingModule,
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    NgZorroAntdModule,
     HttpClientModule,
     BrowserAnimationsModule,
     NgZorroAntdModule,
